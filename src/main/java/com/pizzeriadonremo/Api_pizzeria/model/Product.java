@@ -47,4 +47,18 @@ public class Product {
     @JsonIgnore
     private List<ProductInOrder> orderProductList;
 
+    public Product(Long product_id, String productName, Double price, int availableQuantity, Category category) {
+        this.product_id = product_id;
+        this.productName = productName;
+        this.price = price;
+        this.availableQuantity = availableQuantity;
+        this.category = category;
+    }
+
+    public Product(Long product_id, String productName, Double price, int availableQuantity) {
+        this.product_id = product_id;
+        this.productName = productName;
+        this.price = price;
+        this.availableQuantity = availableQuantity;
+    }
 }

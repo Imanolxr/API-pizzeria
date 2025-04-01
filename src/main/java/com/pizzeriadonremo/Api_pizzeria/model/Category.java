@@ -27,4 +27,9 @@ public class Category {
     @JsonManagedReference
     @OneToMany(mappedBy = "category")
     private List<Product> productsInCategory;
+
+    public Category(Long category_id, String categoryName) {
+        this.category_id = category_id;
+        this.categoryName = categoryName;
+    }
 }
